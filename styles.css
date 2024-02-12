@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.51;
+}
+
+main {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  background-color:  hsl(225, 100%, 94%);
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card {
+  height: 566px;
+  width: 327px;
+  border-radius: 1.2em;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img {
+  background-image: url("./images/illustration-hero.svg");
+  height: 10em;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 22px;
+  padding-top: 1.3em;
+  padding-bottom: .7em;
+}
+
+p {
+  font-weight: 500;
+  opacity: 70%;
+}
+
+p:not(.plan-details p) {
+  text-align: center;
+  max-width: 25ch;
+  margin: 0 auto;
+  
+}
+
+.plan {
+  display: flex;
+  gap: 1em;
+  margin: 1em auto;
+  align-items: center;
+  width: max-content;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 10px;
+}
+
+
+.plan a {
+  justify-self: end;
+  margin-left: 2.5em;
+  font-size: 14px;
+  color: hsl(245, 75%, 52%);
+  font-weight: 700;
+}
+
+.plan-details {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.plan-details > * {
+  font-size: 14px;
+}
+
+button {
+  display: block;
+  width: 85%;
+  margin: 0 auto;
+  padding: .9em;
+  margin-bottom: .5em;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 15px;
+  opacity: 70%;
+}
+
+.confirm {
+  background-color: hsl(245, 75%, 52%);
+  box-shadow: 0px 20px 10px hsla(245, 75%, 52%, 15%);
+  color: white;
+  opacity: 100%;
+}
+
+a:hover, button:hover {
+  cursor: pointer;
+  filter: brightness(200%);
+  opacity: 80%;
+}
+
+@media (min-width: 800px) {
+  main {
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-size: contain;
+  }
+  .card {
+    width: 400px;
+    height: auto;
+  }
+
+  .card-img {
+    height: 14em;
+  }
+
+  p:not(.plan-details p) {
+   
+   max-width: 80%;
+   line-height: 2;
+   font-weight: 500;
+   opacity: 70%;
+  }
+
+  .plan {
+    padding: 1em 1em;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: space-evenly;
+    width: 80%;
+  }
+
+  .plan a {
+    
+    justify-self: flex-end;
+    flex-grow: 1;
+    text-align: end;
+  }
+}
